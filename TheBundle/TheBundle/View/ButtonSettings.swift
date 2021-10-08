@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable final class SettingButton: UIButton {
+@IBDesignable final class ButtonSettings: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = 5

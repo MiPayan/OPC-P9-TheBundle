@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable final class SettingTextField: UITextField {
+@IBDesignable final class TextFieldSettings: UITextField {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = 5

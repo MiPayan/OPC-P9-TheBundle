@@ -9,6 +9,7 @@ import Foundation
 
 private let numberFormatter = NumberFormatter()
 
+//    to delete numbers after the comma
 extension Double {
     func toTruncatedString() -> String {
         let number = NSNumber(value: self)

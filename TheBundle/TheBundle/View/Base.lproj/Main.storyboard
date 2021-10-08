@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kFg-d0-xIc">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,17 +13,17 @@
             <objects>
                 <viewController id="SnZ-eT-Hbz" customClass="ExchangeRateViewController" customModule="TheBundle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gIS-Dk-knV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-SA-8Da">
-                                <rect key="frame" x="16" y="107" width="288" height="240.5"/>
+                                <rect key="frame" x="16" y="112" width="568" height="240.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HbN-KM-NrQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="74"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="74"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez un montant à convertir (€)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-5L-xJl">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="568" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19" id="OwF-qD-Izw"/>
                                                 </constraints>
@@ -33,8 +31,8 @@
                                                 <color key="textColor" red="0.91764706370000004" green="0.34509804840000002" blue="0.18039217590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00€" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nyv-KH-sBd" customClass="SettingTextField" customModule="TheBundle" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="27" width="288" height="47"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00€" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nyv-KH-sBd" customClass="TextFieldSettings" customModule="TheBundle" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="27" width="568" height="47"/>
                                                 <color key="backgroundColor" name="Background TextField"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="jIl-FN-F90"/>
@@ -45,17 +43,17 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-8X-pTA">
-                                        <rect key="frame" x="0.0" y="90.5" width="288" height="59"/>
+                                        <rect key="frame" x="0.0" y="90.5" width="568" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="gsH-XV-2wr"/>
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wgO-5v-FKr">
-                                        <rect key="frame" x="0.0" y="166" width="288" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="166" width="568" height="74.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant convertit ($)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5O-C2-eXV">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="568" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19.5" id="UbU-LT-Tug"/>
                                                 </constraints>
@@ -63,8 +61,8 @@
                                                 <color key="textColor" red="0.91764706370000004" green="0.34509804840000002" blue="0.18039217590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00$" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CRY-Tc-kvW" customClass="SettingTextField" customModule="TheBundle" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="27.5" width="288" height="47"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00$" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CRY-Tc-kvW" customClass="TextFieldSettings" customModule="TheBundle" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="27.5" width="568" height="47"/>
                                                 <color key="backgroundColor" name="Background TextField"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="lu2-CU-iHr"/>
@@ -76,8 +74,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yr-dO-Gsz" customClass="SettingButton" customModule="TheBundle" customModuleProvider="target">
-                                <rect key="frame" x="16" y="467" width="288" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yr-dO-Gsz" customClass="ButtonSettings" customModule="TheBundle" customModuleProvider="target">
+                                <rect key="frame" x="16" y="499" width="568" height="44"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8CR-O8-RzU"/>
@@ -91,7 +89,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gro-Z5-QAt">
-                                <rect key="frame" x="16" y="467" width="288" height="44"/>
+                                <rect key="frame" x="16" y="499" width="568" height="44"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wbc-co-jXQ"/>
@@ -127,17 +125,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TranslationViewController" customModule="TheBundle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-tg-y31">
-                                <rect key="frame" x="16" y="107" width="288" height="308"/>
+                                <rect key="frame" x="16" y="112" width="568" height="308"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AFC-2q-4wj">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="104"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="104"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez le texte à traduire" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHc-cg-JjM">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="568" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19" id="Zyt-VM-6kq"/>
                                                 </constraints>
@@ -146,15 +144,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Détecter la langue : ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpM-DA-XWJ">
-                                                <rect key="frame" x="0.0" y="27" width="288" height="22"/>
+                                                <rect key="frame" x="0.0" y="27" width="568" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="hvW-BG-NKK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="roj-LW-hXp" customClass="SettingTextField" customModule="TheBundle" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="57" width="288" height="47"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="roj-LW-hXp" customClass="TextFieldSettings" customModule="TheBundle" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="57" width="568" height="47"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="lll-iX-QMM"/>
                                                 </constraints>
@@ -164,17 +162,17 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E7t-n7-gyx">
-                                        <rect key="frame" x="0.0" y="120.5" width="288" height="59"/>
+                                        <rect key="frame" x="0.0" y="120.5" width="568" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="qzw-KI-yqY"/>
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-A2-avs">
-                                        <rect key="frame" x="0.0" y="196" width="288" height="49"/>
+                                        <rect key="frame" x="0.0" y="196" width="568" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texte traduit" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-2N-83J">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="568" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19" id="3lz-5n-cn0"/>
                                                 </constraints>
@@ -183,7 +181,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cible : EN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEv-gu-Z0o">
-                                                <rect key="frame" x="0.0" y="27" width="288" height="22"/>
+                                                <rect key="frame" x="0.0" y="27" width="568" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="55d-4S-yjr"/>
                                                 </constraints>
@@ -192,8 +190,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C11-me-uda" customClass="SettingTextField" customModule="TheBundle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="261" width="288" height="47"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C11-me-uda" customClass="TextFieldSettings" customModule="TheBundle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="261" width="568" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="SHx-KV-dcc"/>
                                         </constraints>
@@ -202,8 +200,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCQ-k1-OkR" customClass="SettingButton" customModule="TheBundle" customModuleProvider="target">
-                                <rect key="frame" x="16" y="467" width="288" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCQ-k1-OkR" customClass="ButtonSettings" customModule="TheBundle" customModuleProvider="target">
+                                <rect key="frame" x="16" y="499" width="568" height="44"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fV4-gE-Lcz"/>
@@ -217,7 +215,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oa1-dO-3Gi">
-                                <rect key="frame" x="16" y="467" width="288" height="44"/>
+                                <rect key="frame" x="16" y="499" width="568" height="44"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -289,63 +287,63 @@
             <objects>
                 <viewController id="gJd-z6-iwc" customClass="WeatherViewController" customModule="TheBundle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cN7-R1-ARZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maincitylabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-ai-s6c">
-                                <rect key="frame" x="16" y="91" width="288" height="41"/>
+                                <rect key="frame" x="16" y="96" width="568" height="41"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="30"/>
                                 <color key="textColor" red="0.91764706370000004" green="0.34509804840000002" blue="0.18039217590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6e3-Ug-8Ms">
-                                <rect key="frame" x="16" y="132" width="288" height="24.5"/>
+                                <rect key="frame" x="16" y="137" width="568" height="24.5"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6v-Tg-sia">
-                                <rect key="frame" x="16" y="156.5" width="288" height="68"/>
+                                <rect key="frame" x="16" y="161.5" width="568" height="68"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="50"/>
                                 <color key="textColor" red="0.99215686319999996" green="0.28627452250000002" blue="0.070588238540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempMin + tempMin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMv-tp-bEq">
-                                <rect key="frame" x="16" y="224.5" width="288" height="22"/>
+                                <rect key="frame" x="16" y="229.5" width="568" height="22"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-Pd-WRg">
-                                <rect key="frame" x="16" y="262.5" width="288" height="1"/>
+                                <rect key="frame" x="16" y="267.5" width="568" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="psm-QG-Y5p"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="secondcitylabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-sG-XUO">
-                                <rect key="frame" x="16" y="279.5" width="288" height="41"/>
+                                <rect key="frame" x="16" y="284.5" width="568" height="41"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="30"/>
                                 <color key="textColor" red="0.91764706370000004" green="0.34509804840000002" blue="0.18039217590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aow-Pv-fLV">
-                                <rect key="frame" x="16" y="320.5" width="288" height="24.5"/>
+                                <rect key="frame" x="16" y="325.5" width="568" height="24.5"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5Z-eu-Bs7">
-                                <rect key="frame" x="16" y="345" width="288" height="68"/>
+                                <rect key="frame" x="16" y="350" width="568" height="68"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="50"/>
                                 <color key="textColor" red="0.99215686319999996" green="0.28627452250000002" blue="0.070588238540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempMin + tempMin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzb-FF-Wjn">
-                                <rect key="frame" x="16" y="413" width="288" height="22"/>
+                                <rect key="frame" x="16" y="418" width="568" height="22"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-rW-NfW" customClass="SettingButton" customModule="TheBundle" customModuleProvider="target">
-                                <rect key="frame" x="16" y="467" width="288" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOO-rW-NfW" customClass="ButtonSettings" customModule="TheBundle" customModuleProvider="target">
+                                <rect key="frame" x="16" y="499" width="568" height="44"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4dC-Ah-OjO"/>
@@ -453,29 +451,6 @@
             <point key="canvasLocation" x="-262" y="-642"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="1Yr-dO-Gsz">
-            <size key="intrinsicContentSize" width="159" height="40"/>
-        </designable>
-        <designable name="C11-me-uda">
-            <size key="intrinsicContentSize" width="48" height="57"/>
-        </designable>
-        <designable name="CRY-Tc-kvW">
-            <size key="intrinsicContentSize" width="100" height="50.5"/>
-        </designable>
-        <designable name="ZCQ-k1-OkR">
-            <size key="intrinsicContentSize" width="72" height="40"/>
-        </designable>
-        <designable name="nyv-KH-sBd">
-            <size key="intrinsicContentSize" width="106" height="50.5"/>
-        </designable>
-        <designable name="roj-LW-hXp">
-            <size key="intrinsicContentSize" width="48" height="57"/>
-        </designable>
-        <designable name="vOO-rW-NfW">
-            <size key="intrinsicContentSize" width="84" height="40"/>
-        </designable>
-    </designables>
     <resources>
         <image name="arrow.down" catalog="system" width="120" height="128"/>
         <image name="arrow.left.arrow.right.circle" catalog="system" width="128" height="121"/>
