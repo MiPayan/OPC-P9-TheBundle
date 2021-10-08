@@ -6,6 +6,7 @@
 //
 //  swiftlint:disable identifier_name
 //  swiftlint:disable line_length
+//  swiftlint:disable empty_enum_arguments
 
 import UIKit
 
@@ -27,6 +28,8 @@ final class WeatherViewController: UIViewController {
 }
 
 private extension WeatherViewController {
+
+    //    to get the weather using the network call
     func getWeatherWithId(city id: Int) {
         weatherService.getWeather(city: id) { [weak self] result in
             guard let self = self else {
@@ -35,6 +38,7 @@ private extension WeatherViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let weather):
+                    //    need to improve this condition
                     if weather.name == "Agen" {
                         guard let weatherDescription = weather.weather.first?.description else {
                             return
@@ -52,23 +56,24 @@ private extension WeatherViewController {
                         self.secondTemperatureLabel.text = self.celsius(weather.main.temp)
                         self.secondTemperatureMinimumMaximumLabel.text = " Max. " + self.celsius(weather.main.tempMax) + " Min. " + self.celsius(weather.main.tempMin)
                     }
-                case .failure(let apiError):
+                case .failure(_):
                     self.alertPopUp()
-                    print(apiError)
                 }
             }
         }
     }
 
+    //    re-launches the network call
     @IBAction func didTapRefreshButton() {
         getWeatherWithId(city: 3038634)
         getWeatherWithId(city: 5128581)
     }
 
-    // Absolut zero = -273.15
+    //    to convert the temperature to degrees Celsius using a formula.
     func celsius(_ temperature: Double) -> String {
         let kelvin = temperature
-        let expression = (kelvin - 273.15).toTruncatedString()
+        let absolutZero = 273.15
+        let expression = (kelvin - absolutZero).toTruncatedString()
         return " " + String(expression) + "°"
     }
 }

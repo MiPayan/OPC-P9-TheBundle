@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		375978A326A1E14500831939 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375978A226A1E14500831939 /* SettingButton.swift */; };
-		376ADE1E269DE2C0005CF8F3 /* SettingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376ADE1D269DE2C0005CF8F3 /* SettingTextField.swift */; };
-		376ADE20269DE648005CF8F3 /* SettingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376ADE1F269DE648005CF8F3 /* SettingTextView.swift */; };
+		375978A326A1E14500831939 /* ButtonSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375978A226A1E14500831939 /* ButtonSettings.swift */; };
+		376ADE1E269DE2C0005CF8F3 /* TextFieldSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376ADE1D269DE2C0005CF8F3 /* TextFieldSettings.swift */; };
+		376ADE20269DE648005CF8F3 /* TextViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376ADE1F269DE648005CF8F3 /* TextViewSettings.swift */; };
 		376FBCC8268DDB6600FBA1CF /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 376FBCC7268DDB6600FBA1CF /* Weather.json */; };
 		376FBCCA268DDB9800FBA1CF /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FBCC9268DDB9800FBA1CF /* WeatherTests.swift */; };
 		378AF94A268E16A40077B58F /* Translation.json in Resources */ = {isa = PBXBuildFile; fileRef = 378AF949268E16A40077B58F /* Translation.json */; };
@@ -64,9 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		375978A226A1E14500831939 /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
-		376ADE1D269DE2C0005CF8F3 /* SettingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTextField.swift; sourceTree = "<group>"; };
-		376ADE1F269DE648005CF8F3 /* SettingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTextView.swift; sourceTree = "<group>"; };
+		375978A226A1E14500831939 /* ButtonSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSettings.swift; sourceTree = "<group>"; };
+		376ADE1D269DE2C0005CF8F3 /* TextFieldSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSettings.swift; sourceTree = "<group>"; };
+		376ADE1F269DE648005CF8F3 /* TextViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewSettings.swift; sourceTree = "<group>"; };
 		376FBCC7268DDB6600FBA1CF /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
 		376FBCC9268DDB9800FBA1CF /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		378AF949268E16A40077B58F /* Translation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Translation.json; sourceTree = "<group>"; };
@@ -204,8 +204,8 @@
 			children = (
 				379DFDC02640207000CE196B /* Info.plist */,
 				379DFDE52640209B00CE196B /* SupportingFiles */,
-				37EB85E5266109FF00262394 /* Networking */,
 				37DB9036265BFCA900F7BAB1 /* Extension */,
+				37EB85E5266109FF00262394 /* Networking */,
 				379DFDE42640209600CE196B /* Model */,
 				379DFDE32640208B00CE196B /* View */,
 				379DFDE22640207D00CE196B /* Controller */,
@@ -239,9 +239,9 @@
 			children = (
 				379DFDB82640206F00CE196B /* Main.storyboard */,
 				379DFDBD2640207000CE196B /* LaunchScreen.storyboard */,
-				376ADE1D269DE2C0005CF8F3 /* SettingTextField.swift */,
-				376ADE1F269DE648005CF8F3 /* SettingTextView.swift */,
-				375978A226A1E14500831939 /* SettingButton.swift */,
+				376ADE1D269DE2C0005CF8F3 /* TextFieldSettings.swift */,
+				376ADE1F269DE648005CF8F3 /* TextViewSettings.swift */,
+				375978A226A1E14500831939 /* ButtonSettings.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,17 +532,17 @@
 				379DFE0B2640255C00CE196B /* ExchangeRateService.swift in Sources */,
 				379DFDB32640206F00CE196B /* AppDelegate.swift in Sources */,
 				37DB9038265BFCD000F7BAB1 /* Double+Number.swift in Sources */,
-				375978A326A1E14500831939 /* SettingButton.swift in Sources */,
+				375978A326A1E14500831939 /* ButtonSettings.swift in Sources */,
 				379DFE13264034E900CE196B /* APIConfiguration.swift in Sources */,
 				37A6581E26775128005B65E1 /* DetectionService.swift in Sources */,
 				37EB85E726610A2500262394 /* WeatherService.swift in Sources */,
 				379DFE15264035DC00CE196B /* APIWeather.swift in Sources */,
-				376ADE20269DE648005CF8F3 /* SettingTextView.swift in Sources */,
+				376ADE20269DE648005CF8F3 /* TextViewSettings.swift in Sources */,
 				379DFE0D2640266100CE196B /* Currency.swift in Sources */,
 				37A6582026775627005B65E1 /* DataClassDetection.swift in Sources */,
 				37DBA94D264575DE00EFF5BA /* ExchangeRateViewController.swift in Sources */,
 				379DFDB52640206F00CE196B /* SceneDelegate.swift in Sources */,
-				376ADE1E269DE2C0005CF8F3 /* SettingTextField.swift in Sources */,
+				376ADE1E269DE2C0005CF8F3 /* TextFieldSettings.swift in Sources */,
 				379DFE11264030A000CE196B /* TranslationService.swift in Sources */,
 				37DB9032265BFBFF00F7BAB1 /* Main.swift in Sources */,
 				379DFE0F2640309200CE196B /* Translation.swift in Sources */,

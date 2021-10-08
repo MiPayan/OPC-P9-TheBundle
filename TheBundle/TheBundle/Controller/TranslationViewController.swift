@@ -25,6 +25,7 @@ final class TranslationViewController: UIViewController {
 }
 
 private extension TranslationViewController {
+    //    to get the translation using the network call
     func getTranslation(text: String) {
         translationService.getTranslation(text: text) { [weak self] result in
             guard let self = self else {
@@ -46,6 +47,7 @@ private extension TranslationViewController {
         }
     }
 
+    //    for automatic detection using the network call
     func getDetection(text: String) {
         detectionService.getDetection(text: text) { [weak self] result in
             guard let self = self else {
@@ -66,6 +68,7 @@ private extension TranslationViewController {
         }
     }
 
+    //    to get translation when button tapped
     @IBAction func didTapTranslationButton(_ sender: Any) {
         dismissKeyboard()
         activityIndicator.startAnimating()

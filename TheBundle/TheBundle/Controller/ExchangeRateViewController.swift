@@ -11,7 +11,7 @@ final class ExchangeRateViewController: UIViewController {
 
     @IBOutlet private weak var valueToConvertTextField: UITextField!
     @IBOutlet private weak var valueConvertedTextField: UITextField!
-    @IBOutlet private weak var convertButton: SettingButton!
+    @IBOutlet private weak var convertButton: ButtonSettings!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     private let exchangeRate = ExchangeRateService()
 
@@ -24,6 +24,7 @@ final class ExchangeRateViewController: UIViewController {
 }
 
 private extension ExchangeRateViewController {
+    //    to get the currency using the network call
     func getCurrency(_ value: String) {
         exchangeRate.getCurrency { [weak self] result in
             guard let self = self else {
@@ -47,6 +48,7 @@ private extension ExchangeRateViewController {
         }
     }
 
+    //    to get convertion when button tapped
     @IBAction func didTapConvertButton(_ sender: Any) {
         dismissKeyboard()
         activityIndicator.startAnimating()
