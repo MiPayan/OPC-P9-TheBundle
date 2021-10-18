@@ -18,8 +18,7 @@ class TranslationTests: XCTestCase {
 
         let json = try Data(contentsOf: url)
         let translation = try JSONDecoder().decode(Translation.self, from: json)
-        if let translate = translation.data.translations.first?.translatedText {
+        guard let translate = translation.data.translations.first?.translatedText  else { return }
             XCTAssertEqual(translate, "Open classroom")
-        }
     }
 }

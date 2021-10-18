@@ -40,17 +40,13 @@ private extension WeatherViewController {
                 case .success(let weather):
                     //    need to improve this condition
                     if weather.name == "Agen" {
-                        guard let weatherDescription = weather.weather.first?.description else {
-                            return
-                        }
+                        guard let weatherDescription = weather.weather.first?.description else { return }
                         self.mainDescriptionLabel.text = weatherDescription.description.capitalized
                         self.mainCityLabel.text = "\(weather.name)"
                         self.mainTemperatureLabel.text = self.celsius(weather.main.temp)
                         self.mainTemperatureMinimumMaximumLabel.text = " Max. " + self.celsius(weather.main.tempMax) + " Min. " + self.celsius(weather.main.tempMin)
                     } else {
-                        guard let weatherDescription = weather.weather.first?.description else {
-                            return
-                        }
+                        guard let weatherDescription = weather.weather.first?.description else { return }
                         self.secondDescriptionLabel.text = weatherDescription.description.capitalized
                         self.secondCityLabel.text = "\(weather.name)"
                         self.secondTemperatureLabel.text = self.celsius(weather.main.temp)

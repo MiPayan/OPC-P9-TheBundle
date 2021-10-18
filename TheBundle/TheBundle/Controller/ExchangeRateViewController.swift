@@ -4,6 +4,7 @@
 //
 //  Created by Mickael PAYAN on 07/05/2021.
 //
+//  swiftlint:disable empty_enum_arguments
 
 import UIKit
 
@@ -24,7 +25,7 @@ final class ExchangeRateViewController: UIViewController {
 }
 
 private extension ExchangeRateViewController {
-    //    to get the currency using the network call
+    //    to get the currency using the network call.
     func getCurrency(_ value: String) {
         exchangeRate.getCurrency { [weak self] result in
             guard let self = self else {
@@ -34,15 +35,14 @@ private extension ExchangeRateViewController {
                 self.activityIndicator.stopAnimating()
                 switch result {
                 case .success(let currency):
-                    if let valueToConvertText = self.valueToConvertTextField.text,
-                       let doubleToConvert = Double(valueToConvertText) {
-                        let valueToMultiply = Double(currency.rates.usd)
-                        let operation = doubleToConvert * valueToMultiply
-                        self.valueConvertedTextField.text = String(operation.toTruncatedStringWithTwoDigits())
-                    }
-                case .failure(let apiError):
+                    //  converted in type Double to get operation. Current currency in targeted currency.
+                    guard let valueToConvertText = self.valueToConvertTextField.text,
+                          let doubleToConvert = Double(valueToConvertText) else { return }
+                    let valueToMultiply = Double(currency.rates.usd)
+                    let operation = doubleToConvert * valueToMultiply
+                    self.valueConvertedTextField.text = String(operation.toTruncatedStringWithTwoDigits())
+                case .failure(_):
                     self.alertPopUp()
-                    print(apiError)
                 }
             }
         }
@@ -52,9 +52,8 @@ private extension ExchangeRateViewController {
     @IBAction func didTapConvertButton(_ sender: Any) {
         dismissKeyboard()
         activityIndicator.startAnimating()
-        if let valueToConvertText = self.valueToConvertTextField.text {
-            getCurrency(valueToConvertText)
-        }
+        guard let valueToConvertText = self.valueToConvertTextField.text else { return }
+        getCurrency(valueToConvertText)
     }
 
     @objc func dismissKeyboard() {

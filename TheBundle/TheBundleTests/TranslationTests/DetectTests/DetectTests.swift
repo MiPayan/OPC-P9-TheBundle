@@ -18,9 +18,7 @@ class DetectTests: XCTestCase {
 
         let json = try Data(contentsOf: url)
         let detection = try JSONDecoder().decode(DetectionLanguage.self, from: json)
-        if let detectedLanguage = detection.data.detections.first?.first?.language {
+        guard let detectedLanguage = detection.data.detections.first?.first?.language else { return }
             XCTAssertEqual(detectedLanguage, "es")
-        }
     }
-
 }

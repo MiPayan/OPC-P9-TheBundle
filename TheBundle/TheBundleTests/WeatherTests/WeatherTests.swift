@@ -22,9 +22,8 @@ final class WeatherTests: XCTestCase {
         let weather = try JSONDecoder().decode(APIWeather.self, from: json)
 
         // Then
-        if let description = weather.weather.first?.description {
+        guard let description = weather.weather.first?.description else { return }
             XCTAssertEqual(description, "clear sky")
-        }
         XCTAssertEqual(weather.name, "Bronx County")
         XCTAssertEqual(weather.id, 5110253)
         XCTAssertEqual(weather.main.temp, 296.54)

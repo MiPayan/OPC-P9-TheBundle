@@ -56,9 +56,7 @@ private extension TranslationViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let detection):
-                    guard let languageDetected = detection.data.detections.first?.first?.language else {
-                        return
-                    }
+                    guard let languageDetected = detection.data.detections.first?.first?.language else { return }
                     self.autoDetectedLanguageLabel.text = "Détecter la langue : \(languageDetected.uppercased())"
                 case .failure(let apiError):
                     self.alertPopUp()
@@ -72,10 +70,9 @@ private extension TranslationViewController {
     @IBAction func didTapTranslationButton(_ sender: Any) {
         dismissKeyboard()
         activityIndicator.startAnimating()
-        if let randomLanguageTextView = randomLanguageTextView.text {
+        guard let randomLanguageTextView = randomLanguageTextView.text else { return }
             getDetection(text: randomLanguageTextView)
             getTranslation(text: randomLanguageTextView)
-        }
     }
 
     @objc func dismissKeyboard() {
