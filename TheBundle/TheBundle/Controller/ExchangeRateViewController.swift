@@ -9,13 +9,13 @@
 import UIKit
 
 final class ExchangeRateViewController: UIViewController {
-
+    
     @IBOutlet private weak var valueToConvertTextField: UITextField!
     @IBOutlet private weak var valueConvertedTextField: UITextField!
     @IBOutlet private weak var convertButton: ButtonSettings!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     private let exchangeRate = ExchangeRateService()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -47,7 +47,7 @@ private extension ExchangeRateViewController {
             }
         }
     }
-
+    
     //    to get convertion when button tapped
     @IBAction func didTapConvertButton(_ sender: Any) {
         dismissKeyboard()
@@ -55,7 +55,7 @@ private extension ExchangeRateViewController {
         guard let valueToConvertText = self.valueToConvertTextField.text else { return }
         getCurrency(valueToConvertText)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
